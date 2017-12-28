@@ -12,7 +12,7 @@ app.listen(3000,()=>{
   console.log('Listening on port 3000');
 })
 
-app.post("/todo",(req,resp)=>{
+app.post("/todos",(req,resp)=>{
   var newTodo = new Todo({text:req.body.text});
   newTodo.save(newTodo).then((doc)=>{
     resp.status(200).send(doc);
